@@ -76,6 +76,16 @@
    }
 }
 
+@include max($screen-xs) {
+   .horizontalCard {
+      flex-direction: column !important;
+      gap: 0.5rem;
+   }
+   .image {
+      min-width: 100% !important;
+   }
+}
+
 @include max($screen-md) {
    .horizontalCard.blogCard {
       flex-direction: column !important;
