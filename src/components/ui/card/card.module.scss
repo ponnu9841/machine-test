@@ -1,0 +1,100 @@
+@use "@/styles/variables.scss" as *;
+@use "@/styles/mixins.scss" as *;
+
+.cardContainer {
+   display: flex;
+   flex-direction: column;
+   .heading {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+   }
+   .image {
+      max-width: 100%;
+      height: auto;
+      min-width: 100px;
+      border-radius: 1rem;
+   }
+   .content {
+      margin: 1rem 0;
+      font-size: 0.9rem;
+   }
+   .time {
+      color: $text-muted;
+   }
+   .button {
+      margin-top: 1.5rem;
+   }
+}
+
+.horizontalCard {
+   display: flex;
+   flex-direction: row !important;
+   align-items: flex-start;
+   gap: 1rem;
+   .image {
+      min-width: 120px;
+   }
+   .cardContent {
+      .content {
+         font-size: 0.75rem !important;
+      }
+      .time {
+         font-size: 0.88rem !important;
+         margin: 0 !important;
+      }
+      .author {
+         font-size: 1rem !important;
+         margin-bottom: 0.5rem;
+      }
+      hr {
+         margin-top: 1rem !important;
+      }
+   }
+}
+
+.horizontalCard.blogCard {
+   gap: 3rem;
+   .image {
+      min-width: 400px;
+   }
+   .author {
+      margin: 1.5rem 0;
+   }
+   .heading {
+      margin-bottom: 0.5rem;
+   }
+   .content {
+      margin-bottom: 2rem !important;
+      font-size: 0.88rem !important;
+   }
+   .time {
+      color: $success;
+      min-width: fit-content;
+      margin: auto 0;
+      padding: 0 3rem;
+      font-size: 0.88rem;
+   }
+}
+
+@include max($screen-md) {
+   .horizontalCard.blogCard {
+      flex-direction: column !important;
+      gap: 2rem;
+      .image {
+         min-width: 300px;
+         max-width: 100%;
+      }
+      .time {
+         padding: 0;
+         margin-top: -1rem;
+      }
+      .author {
+         margin: 0 0 1rem 0;
+      }
+   }
+
+   .cardContent .content {
+      margin-right: 0 !important;
+   }
+
+}

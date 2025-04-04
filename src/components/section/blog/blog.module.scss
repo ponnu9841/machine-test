@@ -1,0 +1,16 @@
+@use "@/styles/variables.scss" as *;
+@use "@/styles/mixins.scss" as *;
+
+.blogContainer {
+   padding: 3rem 0;
+   display: flex;
+   flex-direction: column;
+   gap: 4rem;
+}
+
+@include max($screen-md) {
+   .blogContainer {
+      padding: 2rem 0;
+      gap: 2rem;
+   }
+}

@@ -1,0 +1,31 @@
+@use "@/styles/variables.scss" as *;
+@use "@/styles/mixins.scss" as *;
+
+.heroContainer {
+   display: flex;
+   gap: 10rem;
+   padding-bottom: 2rem;
+   .hero {
+      max-width: 40%;
+   }
+   .latestNews {
+      h3 {
+         margin-bottom: 1rem;
+      }
+   }
+   .latestNewsContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+   }
+}
+
+@include max($screen-md) {
+   .heroContainer {
+      flex-direction: column;
+      gap: 2rem;
+   }
+   .hero {
+      min-width: 100%;
+   }
+}

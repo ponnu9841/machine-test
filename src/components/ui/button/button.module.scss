@@ -1,0 +1,14 @@
+@use "@/styles/variables.scss" as *;
+.button {
+   display: flex;
+   align-items: start;
+   gap: 0.5rem;
+   background-color: transparent;
+   border: none;
+   color: $success;
+   padding: 0;
+   cursor: pointer;
+   svg {
+      color: $error;
+   }
+}
